@@ -86,8 +86,9 @@ main{
   flex-wrap: wrap; /* ensures wrapping on smaller screens if needed */
 }
 .text {
-  width: 200px;
-  height: 300px;
+  width: 100%;
+  max-width: 250px; /* optional limit */
+  height: auto; /* let height adapt to content */
   border: 1px solid #fbf4f4;
   box-shadow: 0 4px 8px #e2cbb4;
   border-radius: 10px;
@@ -304,6 +305,7 @@ footer {
   .text, .item, .pic {
     margin: 10px 0;
   }
+  
   .pic{
     width:auto;
     height:auto;
@@ -323,10 +325,9 @@ footer {
     width: 100%;
   }
 
-  /* Disable hover scaling to prevent overflow */
-  .text:hover,
-  .images:hover {
-    transform: none;
+  .text:active,
+  .images:active{
+    transform: scale(1.05);
   }
 
   /* Prevent horizontal scrolling on small screens */
